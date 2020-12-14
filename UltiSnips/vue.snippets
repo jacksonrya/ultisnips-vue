@@ -30,14 +30,14 @@ snippet vstyle "Vue / SFC <style> section" b
 endsnippet
 
 snippet vim "Vue / Import component" b
-import ${1/^(.*\/)?(\w+)(\.vue)?$/$2/i} from '@/components/${1}';
+import ${1/^(.*\/)?(\w+)(\.vue)?$/$2/i} from '@/components/${1}'
 endsnippet
 
 snippet vdata "Vue / Component data" b
 data() {
 	return {
 		${1:name}: ${2:value},${0}
-	};
+	}
 }
 endsnippet
 
@@ -45,7 +45,7 @@ snippet vsetup "Vue / Setup method" b
 setup(${1:props${2:, \{ ${3} \}}}) {
 	${0}
 	return {
-	};
+	}
 }
 endsnippet
 
