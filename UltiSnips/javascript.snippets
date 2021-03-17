@@ -21,6 +21,26 @@ export function use${1}(${2}) {
 }
 endsnippet
 
+snippet vcontextprovider "Vue / Context provider" b
+import { provide, inject } from 'vue'
+
+const key = Symbol()
+
+export function use${1}Provider(${2}) {
+	provide(key, ${0})
+}
+
+export function use$1Context() {
+	const context = inject(key)
+
+	if (!context) {
+		throw Error('use$1Context() must be used with use$1Provider()')
+	}
+
+	return context
+}
+endsnippet
+
 snippet vroute "Vue / Route"
 {
 	path: '/${1}',
